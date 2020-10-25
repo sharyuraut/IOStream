@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using SystemIODemo;
 
 namespace FileIODemo
 {
@@ -7,12 +8,21 @@ namespace FileIODemo
     {
         static void Main(string[] args)
         {
-            //DoesFileExists();
-            //ReadLines();
+            DoesFileExists();
+            ReadLines();
 
             FileWriteOperations readwritethroughStreamReader = new FileWriteOperations();
             readwritethroughStreamReader.writeusingStreamWriter();
+            readwritethroughStreamReader.ReaderUsingStreamer();
+
             //readwritethroughStreamReader.ReadFromStream();
+
+            BinarySerialization binarySerialization = new BinarySerialization();
+            binarySerialization.Serialization();
+            binarySerialization.DeSerialization();
+            XmlSerialDeserial xmlserdes = new XmlSerialDeserial();
+            xmlserdes.SerializeXml();
+
         }
         public static void DoesFileExists()
         {

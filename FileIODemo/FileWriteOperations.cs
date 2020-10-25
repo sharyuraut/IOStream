@@ -22,20 +22,19 @@ namespace FileIODemo
             Console.ReadKey();
         }
 
-        public void ReadFromStream()
+        public void ReaderUsingStreamer()
         {
-            string path = @"C:\Users\HP LAPTOP\source\repos\FileIODemo\FileIODemo\sample.txt";
+            string path = @"C:\Users\lenovo\Desktop\BridgeLabz\SystemIODemo\SystemIODemo\sample.txt";
 
-            using (StreamReader source = File.OpenText(path))
+            using (StreamReader sr = File.OpenText(path))
             {
-                string s = "";
-
-                while ((s = source.ReadLine()) != null)
+                String s = "";
+                while ((s = sr.ReadLine()) is null)
                 {
                     Console.WriteLine(s);
                 }
             }
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }
